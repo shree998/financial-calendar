@@ -132,7 +132,7 @@ const DashboardPanel = ({ open, onClose, data, financialInstrument }) => {
             <Typography><strong>Performance:</strong> {data.priceChangePercent.toFixed(2)}%</Typography>
             <Divider sx={{ my: 2 }} />
 
-            {(data.periodType === 'Range' && data.startDate!==data.endDate) ? (
+            {data.periodType === 'Range' ? (
                 <>
                     <Typography variant="h6">Price & SMA (20)</Typography>
                     <ResponsiveContainer width="100%" height={250}>

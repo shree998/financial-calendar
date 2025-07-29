@@ -73,9 +73,23 @@ const theme = useMemo(() => {
   }, [themeMode]);
 
   useEffect(() => {
-    if (dateRange.start && dateRange.end) {
-      const aggregated = aggregateDateRange(dataMap, dateRange.start.openTime, dateRange.end.openTime);
+     if (dateRange.start && dateRange.end) {
+
+      if (dateRange.start.openTime === dateRange.end.openTime) {
+      
+        const singleDayData = dateRange.start; 
+        setPanelData({
+          ...singleDayData, 
+          dailyData: [singleDayData], 
+          startDate: new Date(singleDayData.openTime),
+          endDate: new Date(singleDayData.openTime),
+        });
+      } else {
+       
+       const aggregated = aggregateDateRange(dataMap, dateRange.start.openTime, dateRange.end.openTime);
     setPanelData(aggregated)
+      }
+
       setIsPanelOpen(true);
     }
   }, [dateRange, dataMap]);
