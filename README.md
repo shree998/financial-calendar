@@ -27,6 +27,14 @@ A sophisticated, enterprise-grade financial data visualization application built
     *   **Colorblind-Friendly:** A high-contrast theme using a blue/orange palette.
 *   **Accessibility:** Full keyboard navigation support for the calendar, enabling users to navigate days, weeks, and months without a mouse.
 
+## 📊 Understanding the Calendar UI
+
+Each cell in the daily calendar view is a data-rich summary of the day's trading activity:
+
+*   **Background Color (Volatility Heatmap):** The cell's background color indicates the market's volatility for the day (Low, Medium, or High), based on the selected theme.
+*   **Performance Indicator:** An up/down arrow and percentage value show the price change from open to close.
+*   **Volume Bar:** A horizontal bar at the bottom of the cell provides a visual representation of the trading volume relative to other days.
+
 ## 🚀 Tech Stack
 
 *   **Framework:** [React](https://reactjs.org/) (v19)
