@@ -174,7 +174,7 @@ const Calendar = ({ dataMap, onItemClick, selectedRange }) => {
         view={view}
         onViewChange={(newView) => setView(newView)}
       />
-      <Box sx={{ minHeight: 500 }} >
+      <Box sx={{ minHeight: 500}} >
         {renderView()}
       </Box>
     </Box>
